@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* CSS Document */
+*{
+	box-sizing: border-box;
+}
+#container{
+	width: 800px;
+	margin: 0 auto;
+}
+body{
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	padding: 10px;
+	background-color: lavender;
+}
+header{
+	padding: 5px;
+	text-align: center;
+	background-color: lavender;
+	font-size: 30px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lavenderblush;
+}
+
+li {
+  float: left;
+	border-right: 1px solid lavenderblush;
+}
+
+li a {
+  display: block;
+  color: lavenderblush;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover{
+	color: white;
+	font-size: 115%;
+}
+.active {
+  background-color: rgba(201,201,247,1.00);
+}
