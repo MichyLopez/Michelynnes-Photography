@@ -1,16 +1,24 @@
 @charset "UTF-8";
 /* CSS Document */
+*{
+	border-sizing: border-box;
+}
+#container{
+	width: 800px;
+	margin:0 auto;
+}
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: lavenderblush;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+ 	background-color: lavenderblush;
+	height: 47px;
 }
 
 li {
-  float: left;
+	float: left;
 	border-right: 1px solid lavenderblush;
 }
 
@@ -29,8 +37,8 @@ li a:hover{
 .active {
   background-color: rgba(201,201,247,1.00);
 }
-.header{
-	background-color: aquamarine;
+header{
+	background-color: lavender;
 	text-align: center;
 	padding: 20px;
 }
