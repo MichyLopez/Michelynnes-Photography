@@ -8,11 +8,6 @@
 	height: auto;
 	margin: 0 auto;
 }
-body{
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	background-color:pink;
-}
-
 header{
 	padding: 5px;
 	text-align: center;
@@ -25,13 +20,12 @@ ul {
 	padding: 0;
 	overflow: hidden;
 	background-color: lavenderblush;
+	height: 47px;
 }
-
 li {
 	float: left;
 	border-right: 1px solid lavenderblush;
 }
-
 li a {
 	display: block;
 	color: lavenderblush;
@@ -43,34 +37,27 @@ li a:hover{
 	color: white;
 	font-size: 115%;
 }
-a:active {
+.active {
 	background-color: lavenderblush;
 	color: rgba(201,200,252,1.00);
 }
-
-.active {
+.link {
   background-color: rgba(201,201,247,1.00);
 }
+body{
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	background-color:lavender;
+}
+
 .left{
-	width: 400px;
-	height: 400px;
+	width: 380px;
+	height: 382px;
 	background-color:rgba(255,243,136,.50);
 	border-radius: 25px;
 	float: left;
-	margin: 0px 0px 10px 0px;
-	padding: 30px 30px 30px 30px;
+	margin: 10px 10px 10px 10px;
+	padding: 1px 30px 30px 30px;
 	border: solid 3px rgba(243,136,255,.40);
-}
-
-.right{
-	width: 400px;
-	height: 773px;
-	background-color: rgba(255,107,176,.50);
-	border-radius: 25px;
-	float: right;
-	margin: 0px 0px 10px 0px;
-	padding: 20px 10px 20px 10px;
-	border: solid 3px rgba(254,255,146,1.00);
 }
 div.ex1 {
 	background-color: rgba(254,255,146,.50);
@@ -98,5 +85,14 @@ footer{
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+}
+.left h1{
+	color: black;
+	text-align: center;
+	font-size: 18px;
+}
+.right h1{
+	text-align: center;
+	font-size: 25px;
 }
 
