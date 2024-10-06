@@ -3,14 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Book Now</title>
-<link rel="stylesheet" href="booknow.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+</head>
 
-	</head>
 <body>
-	<div id="container">
+<div id="container">
 	<header><h1 class="vibes">Book now!</h1></header>
 	
 	<ul>
@@ -53,36 +50,33 @@
 			<td>$5 to move locations <div>with graduation photos cost</div></td>
 		</tr>
 		</table>
-<section>
-	<article class="left">
-			<h3>Portait Photos Include:</h3>
-		<dl class="list">
-			<li>Headshot</li>
-			<li>4 basic backgrounds</li>
-			<li>Photo with favorite object</li>
-		</dl>
-	</article>
-		<article class="right">
-			<h3>Different Location Choices:</h3>
-		<ol>
-			<li>The Pearl Downtown San Antonio</li>
-			<li>School Football Stadium</li>
-		</ol>
-		</article>
-		</section>
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/gKMVI9NezeQ?si=8yBeYjA6fMq2GN8t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-		<div>
-		<button onclick="myFunction()">Click me</button>
-<p id="demo"></p>
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "This is a video posted by The Wash Report™ w/ Anthony Washington with locations in the San Antonio area";
-}	
-</script>
-		</div>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gKMVI9NezeQ?si=8yBeYjA6fMq2GN8t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		
-	
+<div class="myform">
+	<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  
+</form>
+	<p>What Photoshoot Session did you have in mind:</p>
 
+<form>
+	<input type="checkbox" id="passport" name="fav_language" value="passport">
+	<label for="passport">Passport Photos</label><br>
+	<input type="checkbox" id="portrait" name="fav_language" value="portrait">
+	<label for="portrait">Portrait Photos</label><br>
+	<input type="checkbox" id="graduation" name="fav_language" value="graduation">
+	<label for="graduation">Graduation Photos</label><br>
+	<input type="checkbox" id="sports" name="fav_language" value="sports">
+	<label for="sports">Sports Action Photos</label><br>
+	<input type="submit" value="Submit">
+	</form> 
+	</div>
+	<footer>
+		<h2>Copyright Michelynne Lopez &#169;</h2>
+	</footer>
+</div>
 </body>
 </html>

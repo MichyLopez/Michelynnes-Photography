@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
+
+/* All Pages */
 *{
 	box-sizing: border-box;
 }
@@ -11,60 +13,42 @@
 header{
 	padding: 5px;
 	text-align: center;
-	background-color: lavender;
-	font-size: 30px;
+	font-size: 35px;
 }
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: lavenderblush;
+	background-color: rgba(102,85,68,.60);
 	height: 47px;
 }
 li {
 	float: left;
-	border-right: 1px solid lavenderblush;
+	border-right: 1px solid 5;
 }
 li a {
 	display: block;
-	color: lavenderblush;
+	color: rgba(101,69,53,1.00);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
 li a:hover{
-	color: white;
+	color: #585946;
 	font-size: 115%;
 }
 .active {
-	background-color: lavenderblush;
-	color: rgba(201,200,252,1.00);
+	background-color:rgba(130,131,105,1.00);
+	color: rgba(101,69,53,1.00);
 }
 .link {
-  background-color: rgba(201,201,247,1.00);
+  background-color: rgba(227,221,213,.20);
 }
 body{
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	background-color:lavender;
-}
-
-.left{
-	width: 380px;
-	height: 382px;
-	background-color:rgba(255,243,136,.50);
-	border-radius: 25px;
-	float: left;
-	margin: 10px 10px 10px 10px;
-	padding: 1px 30px 30px 30px;
-	border: solid 3px rgba(243,136,255,.40);
-}
-div.ex1 {
-	background-color: rgba(254,255,146,.50);
-	width: 360px;
-	height: 110px;
-	overflow: scroll;
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	background-color: #CCA485;
+	text-align: center;
 }
 footer{
 	padding: 1px;
@@ -74,7 +58,6 @@ footer{
 	font-size: 10px;
 	clear: both;
 }
-
 .playwrite{
   font-family: "Playwrite CU", cursive;
   font-optical-sizing: auto;
@@ -86,6 +69,25 @@ footer{
   font-weight: 400;
   font-style: normal;
 }
+/* index */
+.left{
+	width: 380px;
+	height: 382px;
+	background-color:rgba(227,221,213,.20);
+	border-radius: 25px;
+	float: left;
+	margin: 10px 10px 10px 10px;
+	padding: 1px 30px 30px 30px;
+	border: solid 3px rgba(101,69,53,1.00);
+	text-align: center;
+}
+div.ex1 {
+	background-color: rgba(254,255,146,.50);
+	width: 360px;
+	height: 110px;
+	overflow: scroll;
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+}
 .left h1{
 	color: black;
 	text-align: center;
@@ -95,4 +97,119 @@ footer{
 	text-align: center;
 	font-size: 25px;
 }
+/* about me page */
+.mich{
+	width: 420px;
+	height: 580px;
+	background-color: rgba(227,221,213,.20);
+	border-radius: 25px;
+	float: left;
+	margin: 10px 0px 10px 0px;
+	padding: 20px 30px 30px 30px;
+	border: solid 3px rgba(101,69,53,1.00);
+}
+.about{
+	width: 370px;
+	height: 580px;
+	background-color: rgba(227,221,213,.40);
+	border-radius: 25px;
+	float: right;
+	margin: 10px 0px 10px 0px;
+	padding: 10px 10px 20px 10px;
+	border: solid 3px rgba(101,69,53,1.00);
+}
 
+/* book now page */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th{
+	background-color: rgba(101,69,53,1.00);
+	height: 30px;
+	text-align: center;
+	font-size: 18px;
+}
+td {
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(odd) {background-color: rgba(227,221,213,.20)}
+
+.portait{
+	width: 350px;
+	height: 200px;
+	background-color:rgba(255,243,136,.50);
+	border-radius: 25px;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	padding: 1px 30px 30px 30px;
+	border: solid 3px rgba(243,136,255,.40);
+}
+dl.list{
+	list-style-type: upper-roman;
+	margin: 0px;
+	padding: 0;
+}
+.location{
+	width: 350px;
+	height: 200px;
+	background-color: rgba(255,107,176,.50);
+	border-radius: 25px;
+	float: right;
+	margin: 0px 0px 10px 0px;
+	padding: 10px 10px 20px 10px;
+	border: solid 3px rgba(254,255,146,1.00);
+}
+div.fo
+/* library page */
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid pink;
+}
+input[type=text]:focus {
+  background-color: lightgoldenrodyellow;
+}
+div.myform{
+	width: 100%;
+	height:auto;
+	baackground-color:pink;
+	
+}
+
+
+/* prices */
+/* about camera */
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #66666;
+}
+.button:hover {
+  background-color: #555555;
+  color: white;
+}

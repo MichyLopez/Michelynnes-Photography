@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-	<link rel="stylesheet" href="about.css">
+	<link rel="stylesheet" href="main.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
@@ -13,13 +13,38 @@
 	<div id="container">
 	<header><h1 class="vibes">The Camera &#128247;</h1></header>
 		<ul>
-		<li><a class="active" href="index.html">Home</a></li>
-		<li><a class="active" href="BookNow.html">Book Now!</a></li>
-		<li><a class="active" href="aboutme.html">About Me</a></li>
-		<li style="float:right"><a class="active" href="photolibrary.html" >Photo Library</a></li> <!--not ready-->
+		<li><a class="link" href="index.html">Home</a></li>
+		<li><a class="link" href="BookNow.html">Book Now!</a></li>
+		<li><a class="link" href="aboutme.html">About Me</a></li>
+		<li style="float:right"><a class="link" href="photolibrary.html" >Photo Library</a></li> <!--not ready-->
 		</ul>
-<p>I used a Canon Eos rp. It is a mirrorless camrwa with RF 24-105mm f/7.1</p>
-	<img src="Photos/camera.png" alt="canon" width="300" height="230">
-	</div>
+	</div>	
+
+<p>I use a Canon Eos rp. It is  mirrorless camera with a RF of 24-105mm f/7.1</p>
+
+<img id="camera" src="Photos/camera.png" alt="camera" width="0" height="0">
+<p><button class="button" onclick="myCanvas()">Click Here</button></p>	
+<canvas id="myCanvas" width="500" height="300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("camera");
+  ctx.drawImage(img,10,10,450,280);
+}
+</script>
+<canvas id="canvast" width="0" height="0" style="border:0px solid #d3d3d3;">
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.strokeText("Click the button to see me", 90, 75);
+</script>
+
 </body>
 </html>
