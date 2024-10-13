@@ -8,16 +8,19 @@
 
 <body>
 	<div id="container">
-	<header><h1 class="vibes">Book now!</h1></header>
+	<header><h1 class="vibes">Prices</h1></header>
 	
 	<ul>
 		<li><a class="link" href="index.html">Home</a></li>
-		<li><a class="active" href="BookNow.html">Book Now!</a></li> <!--Page with table and lists-->
 		<li><a class="link" href="aboutme.html">About me</a></li>
+		<li><a class="active" href="Prices.html">Prices</a></li>
+		<li><a class="link" href="BookNow.html">Book Now!</a></li>
 		<li style="float:right"><a class="link" href="photolibrary.html" >Photo Library</a></li>
 	</ul>
 		
-	<table style="width:100%">
+	<div class="flex-container">
+    <div class="section_tb" style="flex: 100%">
+		<table>
 		<tr>
 			<th>Photo Style</th>
 			<th>Photo Count</th>
@@ -50,23 +53,28 @@
 			<td>$5 to move locations <div>with graduation photos cost</div></td>
 		</tr>
 		</table>
-<section>
-	<article class="portait">
-			<h3>Portait Photos Include:</h3>
+		</div>
+		</div>
+		<div class="flex-container">
+    <div class="flex-responsive1">
+      <div><h3>Portait Photos Include:</h3>
 		<dl class="list">
 			<li>Headshot</li><br>
 			<li>4 basic backgrounds</li>
 			<li>Photo with favorite object</li>
 		</dl>
-	</article>
-	<article class="location">
+		</div>
+      
+    </div>
+    <div class="flex-responsive1">	
 			<h3>Different Location Choices:</h3>
 		<ol>
 			<li>The Pearl Downtown San Antonio</li>
 			<li>School Football Stadium</li>
 		</ol>
-	</article>
-	</section>
+
+		</div>
+  </div>	
 	<footer>
 		<h2>Copyright Michelynne Lopez &#169;</h2>
 	</footer>
