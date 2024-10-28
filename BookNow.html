@@ -17,39 +17,79 @@
 		<li><a class="active" href="BookNow.html">Book Now!</a></li>
 		<li style="float:right"><a class="link" href="photolibrary.html" >Photo Library</a></li>
 	</ul>
-<div class="flex-container4">
-	<div class="section_yt">
+	
+<div class="flex-container">
+	<div class="left">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gKMVI9NezeQ?si=8yBeYjA6fMq2GN8t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</div>
-	<div class="section_form">
-<div class="myform">
-	<form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br><br>
-  
+</div>
+	<div class="flex-container"> 
+	<div class="flex-responsive">
+			<form action="/action_page.php">
+				<label for="fname">First name:</label><br>
+				<input type="text" id="fname" name="fname"><br>
+				<label for="lname">Last name:</label><br>
+				<input type="text" id="lname" name="lname"><br>
+				<p>What Photoshoot Session did you have in mind:</p>
+		<form>
+			<input type="checkbox" id="passport" name="fav_language" value="passport">
+			<label for="passport">Passport Photos</label><br>
+			<input type="checkbox" id="portrait" name="fav_language" value="portrait">
+			<label for="portrait">Portrait Photos</label><br>
+			<input type="checkbox" id="graduation" name="fav_language" value="graduation">
+			<label for="graduation">Graduation Photos</label><br>
+			<input type="checkbox" id="sports" name="fav_language" value="sports">
+			<label for="sports">Sports Action Photos</label><br>
+		</form> 
+	<form>
+  <textarea>Some text...</textarea>
 </form>
-	<p>What Photoshoot Session did you have in mind:</p>
+			</form>
+		</div>
+		<div class="left">
+		<p>Click the button to get your coordinates.<br> Are any of the locations listed above near?<br> If not please put any requested locations</p><br>
+<button onclick="getLocation()">Try It</button>
+<script>
+const x = document.getElementById("demo");
 
-<form>
-	<input type="checkbox" id="passport" name="fav_language" value="passport">
-	<label for="passport">Passport Photos</label><br>
-	<input type="checkbox" id="portrait" name="fav_language" value="portrait">
-	<label for="portrait">Portrait Photos</label><br>
-	<input type="checkbox" id="graduation" name="fav_language" value="graduation">
-	<label for="graduation">Graduation Photos</label><br>
-	<input type="checkbox" id="sports" name="fav_language" value="sports">
-	<label for="sports">Sports Action Photos</label><br>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script><br>
 	<input type="submit" value="Submit">
-	</form> 
-	</div>
-	</div>
-
+		</div>
+</div>
+	
 	<footer>
 		<h2>Copyright Michelynne Lopez &#169;</h2>
 	</footer>
-</div>	
+	
 </div>
 </body>
 </html>

@@ -5,17 +5,40 @@
 *{
 	box-sizing: border-box;
 }
-#container{
+
+@media only screen and (min-width: 767px) {
+	#container{
 	width: 800px;
 	height: auto;
 	margin: 0 auto;
 }
-header{
-	padding: 5px;
-	text-align: center;
-	font-size: 35px;
+.flex-container {
+    display: flex;
+    background-color:rgba(148,65,63,0.50);
+	margin: 10px;
+
 }
-ul {
+.flex-container > div {
+    background-color: rgba(227,221,213,.60);
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.left {
+    flex-grow: 3;
+}
+.right {
+    flex-grow: 3;
+}
+.stack > div {
+    flex-direction: column;
+    padding: 20px;
+}
+.flex-responsive {
+    flex: 50%;
+}
+	ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -43,20 +66,89 @@ li a:hover{
 	background-color:rgba(229,234,240,0.50);
 	color: #394D54;
 }
+}
+@media only screen and (max-width: 768px){
+	/*phones*/
+	#container{
+		width: 400px;
+	}
+	ul {
+	 list-style-type: none;
+	 margin: 0;
+	 padding: 0;
+	 overflow: hidden;
+	}
+	li {
+		padding: 8px;
+		margin-bottom: 7px;
+		background-color:rgba(148,65,63,0.50);
+		color: #ffffff;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+li:hover {
+  background-color: #394D54;
+}
 
+.active {
+	background-color:rgba(229,234,240,0.50);
+	color: #394D54;
+}
+	#container{
+	width: 500px;
+	height: auto;
+	margin: 0 auto;
+}
+.flex-container {
+    display: flex;
+	flex-direction: column;
+    background-color:rgba(148,65,63,0.50);
+	margin: 10px;
+
+}
+.flex-container > div {
+    background-color: rgba(227,221,213,.60);
+    margin: 10px;
+    padding: 20px;
+    font-size: 15px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.left {
+    flex-grow: 3;
+}
+.right {
+    flex-grow: 3;
+}
+.stack > div {
+    flex-direction: column;
+    padding: 20px;
+}
+.flex-responsive {
+    flex: 50%;
+}
+}
+/*heder/footer*/
+header {
+	background-color: rgba(227,221,213,.60);
+	color: rgba(0,0,0,1.00);
+	padding: 10px;
+	text-align: center;
+	font-size: 20px;
+}
+footer {
+  background-color: rgba(227,221,213,.60);
+  color: rgba(0,0,0,1.00);
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/*nav bar*/
 body{
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	background-color: #90716E;
+	background-color: rgba(227,221,213,1.00);
 	text-align: center;
 }
-footer{
-	padding: 1px;
-	border-style: outset;
-	text-align: center;
-	margin-top: 20px;
-	font-size: 10px;
-	clear: both;
-}
+/*fonts*/
 .playwrite{
   font-family: "Playwrite CU", cursive;
   font-optical-sizing: auto;
@@ -68,30 +160,9 @@ footer{
   font-weight: 400;
   font-style: normal;
 }
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    background-color:rgba(148,65,63,0.50);
-	height: 400px;
-	border-radius: 25px;
-	margin: 10px;
 
-}
-.flex-container > div {
-    background-color: rgba(227,221,213,.60);
-    margin: 10px;
-    padding: 20px;
-    font-size: 15px;
-	border-radius: 20px;
-}
+/*flex*/
 
-/* index */
-.section_L {
-    flex-grow: 3;
-}
-.section_R {
-    flex-grow: 2;
-}
 h2{
 	font-size: 15px;
 }
@@ -103,31 +174,6 @@ div.ex1 {
 	overflow: scroll;
 	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
 }
-
-/* about me page */
-.flex-container2 {
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(148,65,63,.50);
-	height: 580px;
-	border-radius: 25px;
-	margin: 10px;
-
-}
-.flex-container2 > div {
-    background-color: rgba(227,221,213,.60);
-    margin: 10px;
-    padding: 15px;
-    font-size: 15px;
-	border-radius: 20px;
-}
-.section_me {
-    flex-grow: 3;
-}
-.section_ame {
-    flex-grow: 2;
-}
-
 
 /* prices page */
 table {
@@ -144,36 +190,13 @@ td {
 	text-align: left;
 	padding: 8px;
 }
-tr:nth-child(odd) {background-color: rgba(227,221,213,.20)}
-
-.portait{
-	width: 350px;
-	height: 200px;
-	background-color:rgba(255,243,136,.50);
-	border-radius: 25px;
-	float: left;
-	margin: 0px 0px 10px 0px;
-	padding: 1px 30px 30px 30px;
-	border: solid 3px rgba(243,136,255,.40);
+tr:nth-child(odd) {background-color: rgba(227,221,213,.20)
 }
+
 dl.list{
 	list-style-type: upper-roman;
 	margin: 0px;
 	padding: 0;
-}
-.location{
-	width: 350px;
-	height: 200px;
-	background-color: rgba(255,107,176,.50);
-	border-radius: 25px;
-	float: right;
-	margin: 0px 0px 10px 0px;
-	padding: 10px 10px 20px 10px;
-	border: solid 3px rgba(254,255,146,1.00);
-}
-
-.flex-responsive1 {
-    flex: 20%;
 }
 
 /* library page */
@@ -198,30 +221,6 @@ div.desc {
 }
 
 /* book now */
-.flex-container4 {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(148,65,63,.50);
-	height: 735px;
-	border-radius: 25px;
-	margin: 10px;
-	align-content: center;
-
-}
-.flex-container4 > div {
-    background-color: rgba(227,221,213,.60);
-    margin: 10px;
-    padding: 15px;
-    font-size: 15px;
-	border-radius: 20px;
-}
-.section_yt {
-    flex-grow: 3;
-}
-.section_form {
-    flex-grow: 2;
-}
-
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
@@ -239,6 +238,15 @@ div.myform{
 	baackground-color:pink;
 	
 }
+input[type=submit] {
+  background-color: rgba(57,77,84,0.80);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 
 /* about camera */
@@ -250,4 +258,6 @@ div.myform{
 .button:hover {
   background-color: #555555;
   color: white;
+	cursor: pointer;
 }
+
