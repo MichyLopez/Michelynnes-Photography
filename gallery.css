@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+    font-family: 'Comic Sans MS', cursive;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header Styling */
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    animation: rainbow-text 8s linear infinite;
+}
+
+/* Rainbow Text Animation */
+@keyframes rainbow-text {
+    0% { color: #E693E5; }
+    25% { color: #C0E1E5; }
+    50% { color: #BFE5B4; }
+    75% { color: #E5AFB2; }
+    100% { color: #D3C0E6; }
+}
+

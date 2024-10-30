@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="gallery.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+<title>Photo Gallery 2.0</title>
+</head>
+
+<body>
+	<div id="container"> 
+	 <header>
+        <h1 class="vibes">Photo Gallery Extravaganza!</h1>
+    </header>
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a class="link" href="aboutme.html">About me</a></li>
+		<li><a class="link" href="Prices.html">Prices</a></li>
+		<li><a class="link" href="BookNow.html">Book Now!</a></li>
+		<li style="float:right"><a class="link" href="photolibrary.html" >Photo Library</a></li>
+	</ul>
+
+    <!-- Tabs for Different Types of Photography -->
+		<div class="flex-container">
+		<div class="flex-responsive">
+			<p>Explore the wonderful world of photography</p>
+    <div class="tabs">
+        <button class="tab" onclick="showCategory('event')">Events</button>
+        <button class="tab" onclick="showCategory('nature')">Nature</button>
+        <button class="tab" onclick="showCategory('portraits')">Portraits</button>
+        <button class="tab" onclick="showCategory('travel')">Travel</button>
+    </div>
+			
+    <!-- Photo Gallery Section -->
+    <section class="gallery">
+        
+        <div id="event" class="gallery-category">
+            <div class="gallery-item" onclick="openModal(0)"><img src="Photos/downtown3.JPG" alt="event 1"></div>
+			<div class="gallery-item" onclick="openModal(1)"><img src="Photos/downtown2.JPG" alt="event 2"></div>
+            <div class="gallery-item" onclick="openModal(2)"><img src="Photos/downtown4.JPG" alt="event 3"></div>
+        </div>
+
+        <div id="nature" class="gallery-category">
+			<div class="gallery-item" onclick="openModal(3)"><img src="Photos/nature3.JPG" alt="nature 1"></div>
+            <div class="gallery-item" onclick="openModal(4)"><img src="Photos/nature1.JPG" alt="nature 2"></div>
+            <div class="gallery-item" onclick="openModal(5)"><img src="Photos/nature2.JPG" alt="nature 3"></div>
+        </div>
+
+        <div id="portraits" class="gallery-category">
+            <div class="gallery-item" onclick="openModal(6)"><img src="Photos/photo5.JPG" alt="Portrait 1"></div>
+            <div class="gallery-item" onclick="openModal(7)"><img src="Photos/Portrait1.JPG" alt="Portrait 2"></div>
+            <div class="gallery-item" onclick="openModal(8)"><img src="Photos/Portrait2.JPG" alt="Portrait 3"></div>
+        </div>
+
+        <div id="travel" class="gallery-category">
+            <div class="gallery-item" onclick="openModal(9)"><img src="Photos/Photo1.jpg" alt="travel 1"></div>
+            <div class="gallery-item" onclick="openModal(10)"><img src="Photos/travel1.JPG" alt="travel 2"></div>
+            <div class="gallery-item" onclick="openModal(11)"><img src="Photos/travel3.JPG" alt="travel 3"></div>
+        </div>
+		
+		<div id="modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-navigation">
+            <button onclick="prevImage()">&#10094;</button>
+            <button onclick="nextImage()">&#10095;</button>
+        </div>
+    </div>
+		 <script>
+			 function showCategory(category) {
+    // Hide all gallery categories
+    const categories = document.querySelectorAll('.gallery-category');
+    categories.forEach((cat) => cat.classList.remove('active'));
+
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.tab');
+    tabs.forEach((tab) => tab.classList.remove('active'));
+
+    // Show selected category and highlight the tab
+    document.getElementById(category).classList.add('active');
+    document.querySelector(`.tab[onclick="showCategory('${category}')"]`).classList.add('active');
+			 }
+			 let currentImageIndex = 0;
+			 const images = document.querySelectorAll(".gallery-item img");
+			 const modal = document.getElementById("modal");
+			 const modalImage = document.getElementById("modalImage");
+			 
+			 // Function to open the modal and display the clicked image
+			 function openModal(index) {
+				 currentImageIndex = index;
+				 modal.style.display = "block";
+				 modalImage.src = images[currentImageIndex].src;
+			 }
+
+			 // Function to close the modal
+			 function closeModal() {
+				 modal.style.display = "none";
+			 }
+			 
+			 // Function to show the next image
+			 function nextImage() {
+				 currentImageIndex = (currentImageIndex + 1) % images.length;
+				 modalImage.src = images[currentImageIndex].src;
+			 }
+			 // Function to show the previous image
+			 function prevImage() {
+				 currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+				 modalImage.src = images[currentImageIndex].src;
+}
+			 // Close the modal when clicking outside the image
+			 window.onclick = function(event) {
+				 if (event.target == modal) {
+					 closeModal();
+				 }
+			 }
+		</script>
+			</section>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
